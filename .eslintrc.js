@@ -20,5 +20,6 @@ module.exports = {
     'react/prop-types': 0,
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'no-restricted-exports': 0,
+    'object-curly-newline': 0,
   },
 };
