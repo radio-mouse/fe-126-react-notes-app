@@ -1,1 +1,52 @@
 @import "reset";
+@import "vars";
+@import "nav";
+@import "button";
+@import "list";
+@import "search";
+@import "modal";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+.body {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: Nunito, sans-serif;
+  overflow: hidden;
+  padding: 24px 24px 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.text {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 31px;
+  padding-top: 24px;
+}
+
+.text-area {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 31px;
+  padding-top: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $white;
+}

@@ -1,0 +1,25 @@
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.title {
+  font-size: 43px;
+  font-weight: 600;
+
+  &_thin {
+    font-size: 35px;
+    font-weight: 400;
+  }
+}
+
+.title-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $white;
+  font-size: 35px;
+  font-weight: 400;
+}

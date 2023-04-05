@@ -1,0 +1,18 @@
+.search {
+  &__input {
+    background-color: $gray;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    color: $offWhite;
+    font-size: 20px;
+    font-weight: 300;
+    flex: 1;
+    height: 50px;
+    padding-left: 38px;
+    outline: none;
+  }
+
+  &__button {
+    border-radius: 0 30px 30px 0;
+  }
+}

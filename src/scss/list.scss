@@ -1,0 +1,53 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  list-style: none;
+  max-height: calc(100vh - 130px);
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+
+  &__content {
+    background-color: transparent;
+    border: none;
+    color: $black;
+    display: block;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: left;
+    padding: 22px 46px;
+  }
+
+  &__delete {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 20px;
+  font-weight: 300;
+  justify-content: center;
+}
