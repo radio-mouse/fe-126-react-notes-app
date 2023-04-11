@@ -19,7 +19,11 @@
 
 .card {
   border-radius: 10px;
-  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  justify-content: space-between;
 
   &__content {
     background-color: transparent;
@@ -36,9 +40,6 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    position: absolute;
-    right: 16px;
-    top: 16px;
   }
 }
 

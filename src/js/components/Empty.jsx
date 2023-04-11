@@ -1,7 +1,7 @@
 import React from 'react';
 
-import emptySearchImg from '../../../assets/EmptySearch.png';
-import emptyListImg from '../../../assets/EmptyList.png';
+import emptySearchImg from '../../assets/EmptySearch.png';
+import emptyListImg from '../../assets/EmptyList.png';
 
 const Empty = ({ isSearch }) => (
   <div className="empty">
