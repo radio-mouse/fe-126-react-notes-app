@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import deleteIcon from '../../assets/CloseDark.svg';
 import Modal from './Modal';
 
 const Card = ({ note, handleDelete }) => {
   const [hasWarning, setHasWarning] = useState(false);
-  const { title, color } = note;
+  const { title, color, id } = note;
 
   return (
     <>
       <div className="card" style={{ background: color }}>
-        <button type="button" className="card__content">
+        <Link to={`/${id}`} type="button" className="card__content">
           {title}
-        </button>
+        </Link>
         <button onClick={() => setHasWarning(true)} type="button" className="card__delete">
           <img src={deleteIcon} alt="Delete Note" />
         </button>
