@@ -21,5 +21,6 @@ module.exports = {
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'no-restricted-exports': 0,
     'object-curly-newline': 0,
+    'import/no-cycle': 0,
   },
 };

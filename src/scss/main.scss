@@ -17,6 +17,11 @@
   font-family: Nunito, sans-serif;
   overflow: hidden;
   padding: 24px 24px 0;
+
+  &_light {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 #app {

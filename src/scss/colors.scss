@@ -11,6 +11,12 @@
   height: 30px;
   border-radius: 8px;
 
+  &_light {
+    &.color-button_selected {
+      border: 4px solid $black;
+    }
+  }
+
   &_selected {
     border: 4px solid $white;
   }

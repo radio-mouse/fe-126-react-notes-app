@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ThemeContext } from './App';
 
 const Button = ({ icon, text, isSearch, isFloat, handler }) => {
-  const classes = ['button', isSearch && 'search__button', isFloat && 'button_float'];
+  const isLight = useContext(ThemeContext);
+  const classes = ['button', isSearch && 'search__button', isFloat && 'button_float', isLight && 'button_light'];
 
   return (
     <button onClick={handler} type="button" className={classes.join(' ')} aria-label={text}>

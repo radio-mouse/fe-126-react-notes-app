@@ -7,15 +7,27 @@
   height: 50px;
   justify-content: center;
   width: 50px;
-}
 
-.button_float {
-  background-color: $black;
-  border-radius: 50%;
-  bottom: 50px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), -5px 0px 10px rgba(0, 0, 0, 0.4);
-  height: 70px;
-  position: fixed;
-  right: 36px;
-  width: 70px;
+  &_light {
+    background-color: #ddd;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  &_float {
+    background-color: $black;
+    border-radius: 50%;
+    bottom: 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), -5px 0px 10px rgba(0, 0, 0, 0.4);
+    height: 70px;
+    position: fixed;
+    right: 36px;
+    width: 70px;
+
+    &.button_light {
+      background-color: #ccc;
+    }
+  }
 }
