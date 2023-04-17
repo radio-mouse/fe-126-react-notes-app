@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from '../Pages/Home';
@@ -7,33 +7,17 @@ import Edit from '../Pages/Edit';
 import Detail from '../Pages/Detail';
 
 import { ADD, DETAIL, EDIT, HOME, SEARCH } from '../routes';
-
-export const ThemeContext = createContext(false);
-const { Provider: ThemeProvider } = ThemeContext;
+import { useSaveItems, ThemeProvider, useCreateTheme } from '../hooks';
 
 const App = () => {
   const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) ?? []);
-  const [isNotesInitialised, setIsNotesInitialised] = useState(false);
 
-  const themeQuery = window.matchMedia('(prefers-color-scheme: light)');
-  const { matches } = themeQuery;
+  const isLight = useCreateTheme();
 
-  useEffect(() => {
-    if (isNotesInitialised) {
-      localStorage.setItem('notes', JSON.stringify(notes));
-    }
-
-    setIsNotesInitialised(true);
-  }, [notes]);
-
-  useEffect(() => {
-    if (matches) {
-      document.body.classList.add('body_light');
-    }
-  }, [matches]);
+  useSaveItems(notes);
 
   return (
-    <ThemeProvider value={matches}>
+    <ThemeProvider value={isLight}>
       <BrowserRouter>
         <Switch>
           <Route exact path={HOME}>

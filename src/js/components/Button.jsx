@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { ThemeContext } from './App';
+import { ThemeContext } from '../hooks';
 
 const Button = ({ icon, text, isSearch, isFloat, handler }) => {
   const isLight = useContext(ThemeContext);
